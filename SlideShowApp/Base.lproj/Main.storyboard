@@ -43,9 +43,13 @@
                             </stackView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-vm-9ig">
                                 <rect key="frame" x="100" y="324" width="214" height="132"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pJW-vm-9ig" secondAttribute="height" multiplier="107:66" id="gUD-VI-nyk"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Sxs-ch-zYI" appends="YES" id="EVU-rJ-zCP"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -58,14 +62,11 @@
                             <constraint firstItem="rcu-Nm-Dn0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jy7-NJ-dGz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Sxs-ch-zYI" appends="YES" id="kAz-7s-IXD"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="VMR-sg-tjf" id="TRA-v9-EIN"/>
                         <outlet property="imageView" destination="pJW-vm-9ig" id="ZhK-Fw-ind"/>
-                        <outlet property="nextButton" destination="8yg-hv-Ns7" id="7Fa-Oq-8rs"/>
+                        <outlet property="nextButton" destination="n0p-aI-t45" id="Mc8-yJ-i0M"/>
                         <outlet property="switchButton" destination="8yg-hv-Ns7" id="YjG-xR-DCO"/>
                         <segue destination="4DR-lh-g0p" kind="show" identifier="toZoomIn" id="6fY-dh-3Z9"/>
                     </connections>
@@ -92,7 +93,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66N-65-nfo">
-                                <rect key="frame" x="51" y="542" width="312" height="67"/>
+                                <rect key="frame" x="51" y="542.33333333333337" width="312" height="66.666666666666629"/>
                                 <accessibility key="accessibilityConfiguration" identifier="toZoomIn"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>

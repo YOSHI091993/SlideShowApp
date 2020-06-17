@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
@@ -39,7 +38,7 @@ class ViewController: UIViewController {
         
            imageView.image = image
         
-        self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+//        self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
        }
     
      
@@ -116,10 +115,13 @@ class ViewController: UIViewController {
    
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        
     }
     
     @IBAction func onTapAction(_ sender:Any) {
+        if self.timer != nil {
+        timer.invalidate()
+        self.timer = nil
+    }
         self.performSegue(withIdentifier: "toZoomIn", sender: nil)
     }
 

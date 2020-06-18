@@ -121,6 +121,11 @@ class ViewController: UIViewController {
         if self.timer != nil {
         timer.invalidate()
         self.timer = nil
+            
+        nextButton.isEnabled = true
+        backButton.isEnabled = true
+
+        switchButton.setTitle("再生", for: .normal)
     }
         self.performSegue(withIdentifier: "toZoomIn", sender: nil)
     }
